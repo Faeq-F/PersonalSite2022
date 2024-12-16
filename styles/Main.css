@@ -1,0 +1,486 @@
+html {
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+}
+
+/*Concerning overflow-x: hidden, it is minimal and does not cause issues at the moment*/
+body {
+  background: #f2f4f8;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+* {
+  transition: all 0.25s ease-out;
+  font-family: sans-serif;
+  cursor: none;
+}
+
+.cursor {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 1px solid black;
+  transition: all 200ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+  z-index: 9999999999999999999999999999999999999999999999999;
+}
+
+.cursor2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: black;
+  opacity: .3;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width .3s, height .3s, opacity .3s;
+  z-index: 9999999999999999999999999999999999999999999999999;
+}
+
+.hover {
+  background-color: #a97ef4b4;
+  opacity: 0.5;
+  z-index: 9999999999999999999999999999999999999999999999999;
+}
+
+.cursorinnerhover {
+  width: 50px;
+  height: 50px;
+  opacity: .5;
+  z-index: 9999999999999999999999999999999999999999999999999;
+}
+
+#HomeScrollImg {
+  position: absolute;
+  top: 90vh;
+  width: 3vw;
+  left: 50vw;
+}
+
+.hideme {
+  opacity: 0;
+  transform: translateY(-20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+
+.showme {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.hidemee {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+
+  box-shadow: inset 0 0 10px 10px transparent;
+  border: solid 3px transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+
+  border-radius: 360px;
+  box-shadow: inset 0 0 10px 10px #a97ef4;
+  border: solid 2px transparent;
+}
+
+/*Style for mobile view*/
+@media (max-width: 661px) {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+
+  ::-webkit-scrollbar-track {
+    width: 0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    width: 0;
+  }
+}
+
+
+
+.card {
+  height: 50vh;
+  width: 70%;
+  max-width: 95%;
+  margin: 0 auto 300px auto;
+  text-align: center;
+  padding: 2rem;
+  line-height: 1.45;
+  font-size: 16px;
+  color: #2c2c2cd5;
+  background-color: #ffffff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+
+  -webkit-transition: -webkit-transform .5s, opacity .5s;
+  -moz-transition: -moz-transform .5s, opacity .5s;
+  -o-transition: -o-transform .5s, opacity .5s;
+  transition: transform .5s, opacity .5s;
+}
+
+a[href] {
+  color: #a97ef4;
+  text-decoration: none;
+}
+
+/* unvisited link */
+a[href]:link {
+  color: #a97ef4;
+  text-decoration: none;
+}
+
+/* visited link */
+a[href]:visited {
+  color: #a97ef4;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a[href]:hover {
+  color: #ba99f3d0;
+  text-decoration: none;
+}
+
+/* selected link */
+a[href]:active {
+  color: #a97ef4;
+  text-decoration: none;
+}
+
+
+/* Cursor */
+
+#custom-cursor {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transition: transform 500ms;
+}
+
+#custom-cursor::after {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  border: 1px solid white;
+  width: 16px;
+  height: 16px;
+}
+
+#custom-cursor.zoom {
+  transform: scale(3);
+}
+
+
+
+
+
+
+#themeDiv {
+  position: absolute;
+  top: 90vh;
+  left: 90vw;
+}
+
+@media(max-width: 661px) {
+  #themeDiv {
+    top: 3vh;
+    left: 38vw;
+  }
+}
+
+/* Switch styles */
+
+:root {
+  --hue: 270;
+  --bg: hsl(var(--hue), 10%, 90%);
+  --fg: hsl(var(--hue), 10%, 10%);
+  --light-sh: hsla(var(--hue), 10%, 95%, 0.5);
+  --dark-sh: hsla(var(--hue), 10%, 15%, 0.4);
+  --primary: hsl(var(--hue), 90%, 70%);
+  --primary-t: hsla(var(--hue), 90%, 50%, 0);
+  --trans-dur: 0.3s;
+}
+
+input {
+  font: 1em/1.5 sans-serif;
+}
+
+.switch,
+.switch__input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.switch {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  margin: auto;
+}
+
+.switch__icon,
+.switch__icon-part {
+  display: block;
+}
+
+.switch__icon {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  transition: filter var(--trans-dur);
+}
+
+.switch__icon-part {
+  background-color: hsla(var(--hue), 10%, 10%, 0.3);
+  position: absolute;
+  transition:
+    background-color var(--trans-dur),
+    box-shadow var(--trans-dur);
+}
+
+.switch__icon--light {
+  filter: drop-shadow(0 0 0.125em hsla(var(--hue), 90%, 70%, 0.2));
+}
+
+.switch__icon--light .switch__icon-part {
+  background-color: hsla(var(--hue), 90%, 70%, 1);
+  border-radius: 0.125em;
+  top: 50%;
+  left: 50%;
+  width: 0.125em;
+  height: 0.2em;
+  transform-origin: 50% 0;
+}
+
+.switch__icon--light .switch__icon-part--1 {
+  border-radius: 50%;
+  box-shadow:
+    0 0.0625em 0.0625em var(--dark-sh) inset,
+    0 0.0625em 0.0625em var(--light-sh);
+  top: 0.3em;
+  left: 0.3em;
+  width: 0.4em;
+  height: 0.4em;
+}
+
+.switch__icon--light .switch__icon-part--2 {
+  box-shadow:
+    0 0.0625em 0.0625em var(--dark-sh) inset,
+    0 0.0625em 0.0625em var(--light-sh);
+  transform: translateX(-50%) rotate(0) translateY(0.3em);
+}
+
+.switch__icon--light .switch__icon-part--3 {
+  box-shadow:
+    0.0625em 0.0625em 0.0625em var(--dark-sh) inset,
+    0.0625em 0.0625em 0.0625em var(--light-sh);
+  transform: translateX(-50%) rotate(45deg) translateY(0.3em);
+}
+
+.switch__icon--light .switch__icon-part--4 {
+  box-shadow:
+    0.0625em 0 0.0625em var(--dark-sh) inset,
+    0.0625em 0 0.0625em var(--light-sh);
+  transform: translateX(-50%) rotate(90deg) translateY(0.3em);
+}
+
+.switch__icon--light .switch__icon-part--5 {
+  box-shadow:
+    0.0625em -0.0625em 0.0625em var(--dark-sh) inset,
+    0.0625em -0.0625em 0.0625em var(--light-sh);
+  transform: translateX(-50%) rotate(135deg) translateY(0.3em);
+}
+
+.switch__icon--light .switch__icon-part--6 {
+  box-shadow:
+    0 -0.0625em 0.0625em var(--dark-sh) inset,
+    0 -0.0625em 0.0625em var(--light-sh);
+  transform: translateX(-50%) rotate(180deg) translateY(0.3em);
+}
+
+.switch__icon--light .switch__icon-part--7 {
+  box-shadow:
+    -0.0625em -0.0625em 0.0625em var(--dark-sh) inset,
+    -0.0625em -0.0625em 0.0625em var(--light-sh);
+  transform: translateX(-50%) rotate(225deg) translateY(0.3em);
+}
+
+.switch__icon--light .switch__icon-part--8 {
+  box-shadow:
+    -0.0625em 0 0.0625em var(--dark-sh) inset,
+    -0.0625em 0 0.0625em var(--light-sh);
+  transform: translateX(-50%) rotate(270deg) translateY(0.3em);
+}
+
+.switch__icon--light .switch__icon-part--9 {
+  box-shadow:
+    -0.0625em 0.0625em 0.0625em var(--dark-sh) inset,
+    -0.0625em 0.0625em 0.0625em var(--light-sh);
+  transform: translateX(-50%) rotate(315deg) translateY(0.3em);
+}
+
+.switch__icon--dark {
+  filter:
+    drop-shadow(0 0 0.125em hsla(var(--hue), 90%, 70%, 0)) drop-shadow(0 0.0625em 0.0625em var(--light-sh));
+}
+
+.switch__icon--dark .switch__icon-part--1 {
+  background-color: transparent;
+  border-radius: 50%;
+  clip-path: url(#moon);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.switch__icon--dark .switch__icon-part--1a {
+  border-radius: 50%;
+  box-shadow: 0 0.0625em 0.0625em var(--dark-sh) inset;
+  width: 100%;
+  height: 100%;
+}
+
+.switch__icon--dark .switch__icon-part--1b {
+  background-color: transparent;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.switch__icon--dark .switch__icon-part--1b:before {
+  background-color: var(--bg);
+  border-radius: 50%;
+  box-shadow:
+    0 0.0625em 0.0625em var(--dark-sh),
+    0 0.0625em 0.0625em var(--light-sh) inset;
+  content: "";
+  display: block;
+  position: absolute;
+  transition: background-color var(--trans-dur);
+  width: 70.5%;
+  height: 70.5%;
+}
+
+.switch__input {
+  background-color: hsla(var(--hue), 10%, 10%, 0.1);
+  border-radius: 0.75em;
+  box-shadow:
+    0 0.0625em 0.125em var(--dark-sh) inset,
+    0 0.0625em 0.125em var(--light-sh),
+    0 0 0 0.125em var(--primary-t);
+  display: block;
+  outline: transparent;
+  position: relative;
+  width: 2.5em;
+  height: 1.5em;
+  transition: box-shadow var(--trans-dur);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.switch__input:focus-visible {
+  box-shadow:
+    0 0.0625em 0.125em var(--dark-sh) inset,
+    0 0.0625em 0.125em var(--light-sh),
+    0 0 0 0.125em var(--primary);
+}
+
+.switch__input:before {
+  background-color: var(--primary);
+  border-radius: 50%;
+  box-shadow: 0 0.0625em 0.125em hsla(var(--hue), 10%, 10%, 0.5);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0.25em;
+  left: 0.25em;
+  width: 1em;
+  height: 1em;
+  transition:
+    background-color var(--trans-dur),
+    box-shadow var(--trans-dur),
+    transform var(--trans-dur) cubic-bezier(0.65, 0.05, 0.34, 1);
+}
+
+.switch__input:checked:before {
+  transform: translateX(1em);
+}
+
+.switch__label {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+}
+
+/* Dark theme */
+body:has(.switch__input:checked) {
+  --bg: rgb(13, 11, 7);
+  --fg: hsl(var(--hue), 10%, 90%);
+  --light-sh: hsla(var(--hue), 10%, 55%, 0.5);
+  --dark-sh: hsla(var(--hue), 10%, 15%, 0.4);
+  --primary: hsl(var(--hue), 90%, 60%);
+}
+
+body:has(.switch__input:checked) .switch__icon--light {
+  filter: drop-shadow(0 0 0.125em hsla(var(--hue), 90%, 75%, 0));
+}
+
+body:has(.switch__input:checked) .switch__icon--light .switch__icon-part {
+  background-color: hsla(var(--hue), 10%, 10%, 0.3);
+}
+
+body:has(.switch__input:checked) .switch__icon--dark {
+  filter:
+    drop-shadow(0 0 0.125em hsla(var(--hue), 90%, 75%, 0.6)) drop-shadow(0 0.0625em 0.0625em var(--light-sh));
+}
+
+body:has(.switch__input:checked) .switch__icon--dark .switch__icon-part--1a {
+  background-color: hsla(var(--hue), 90%, 75%, 1);
+}
