@@ -62,7 +62,6 @@ li a svg {
   height: 8vh;
 }
 
-
 footer {
   margin: 0 auto;
   text-align: center;
@@ -81,18 +80,19 @@ footer {
   line-height: 1.45;
   font-size: 16px;
   color: #2c2c2cd5;
-  background: white url("../Resources/ConnectBG.gif") center;
+  background: white url("/PersonalSite2022/Resources/ConnectBG.gif") center;
   background-size: cover;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
 
-  -webkit-transition: -webkit-transform .5s, opacity .5s;
-  -moz-transition: -moz-transform .5s, opacity .5s;
-  -o-transition: -o-transform .5s, opacity .5s;
-  transition: transform .5s, opacity .5s;
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  -moz-transition: -moz-transform 0.5s, opacity 0.5s;
+  -o-transition: -o-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
 }
 
 .ConnectTagline {
@@ -105,10 +105,10 @@ footer {
   background-image: none;
   color: #f2f4f8 !important;
   font-weight: bolder;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@media(max-width: 661px) {
+@media (max-width: 661px) {
   footer {
     width: 95vw;
   }
@@ -140,8 +140,7 @@ footer {
   padding: 0;
 }
 
-@media(max-width: 661px) {
-
+@media (max-width: 661px) {
   .SocialLink {
     margin-top: 0;
   }
@@ -198,14 +197,12 @@ original creator Copyright - 2023 StealthWorm (thierry) - MIT License*/
 
 .SocialBtn strong {
   z-index: 2;
-  font-family: 'Avalors Personal Use';
+  font-family: "Avalors Personal Use";
   font-size: 5vw;
   letter-spacing: 5px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-shadow: 0 0 4px white;
 }
-
-
 
 .circle {
   width: 100%;
@@ -215,14 +212,13 @@ original creator Copyright - 2023 StealthWorm (thierry) - MIT License*/
   z-index: -1;
 }
 
-
 .btn:hover #container-stars {
   z-index: 1;
   background-color: #212121;
 }
 
 .btn:hover {
-  transform: scale(1.1)
+  transform: scale(1.1);
 }
 
 .btn:active {

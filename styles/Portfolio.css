@@ -214,60 +214,60 @@ aside {
 
 .grid-item:nth-child(1),
 input#img-0:checked~.modal-window {
-  background-image: url(../Resources/PortfolioCertifications/FaeqFaisal-Microsoft-FoundationalCsharp.png);
+  background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-Microsoft-FoundationalCsharp.png);
 }
 
 .grid-item:nth-child(2),
 input#img-1:checked~.modal-window {
-  background-image: url(../Resources/PortfolioCertifications/FaeqFaisal-Cisco-Work_Experience.png);
+  background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-Cisco-Work_Experience.png);
 }
 
 .grid-item:nth-child(3),
 input#img-2:checked~.modal-window {
-  background-image: url(../Resources/PortfolioCertifications/FaeqFaisal-mimo-certificates-web_development.png);
+  background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-mimo-certificates-web_development.png);
   background-position: 55% center;
 }
 
 
 .grid-item:nth-child(4),
 input#img-3:checked~.modal-window {
-  background-image: url(../Resources/PortfolioCertifications/FaeqFaisal-RI-Masterclasses.png);
+  background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-RI-Masterclasses.png);
 }
 
 .grid-item:nth-child(5),
 input#img-4:checked~.modal-window {
-  background-image: url(../Resources/PortfolioCertifications/FaeqFaisal-Siemens-work_experience.png);
+  background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-Siemens-work_experience.png);
 }
 
 .grid-item:nth-child(6),
 input#img-5:checked~.modal-window {
-  background-image: url(../Resources/PortfolioCertifications/FaeqFaisal-YP-science\,_engineering_&_IT_work_experience.png);
+  background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-YP-science\,_engineering_&_IT_work_experience.png);
 }
 
 .grid-item:nth-child(7),
 input#img-6:checked~.modal-window {
-  background-image: url(../Resources/PortfolioCertifications/FaeqFaisal-mimo-certificates-become_a_hacker.png);
+  background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-mimo-certificates-become_a_hacker.png);
 }
 
 .grid-item:nth-child(8),
 input#img-7:checked~.modal-window {
-  background-image: url(../Resources/PortfolioCertifications/FaeqFaisal-mimo-certificates-make_a_website.png);
+  background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-mimo-certificates-make_a_website.png);
   background-position: 85% center;
 }
 
 .grid-item:nth-child(9),
 input#img-8:checked~.modal-window {
-  background-image: url(../Resources/PortfolioCertifications/FaeqFaisal-YP-tech_the_future_work_experience.png);
+  background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-YP-tech_the_future_work_experience.png);
 }
 
 .grid-item:nth-child(10),
 input#img-9:checked~.modal-window {
-  background-image: url(../Resources/PortfolioCertifications/FaeqFaisal-YP-tech_the_future_insight_evening.png);
+  background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-YP-tech_the_future_insight_evening.png);
 }
 
 .grid-item:nth-child(11),
 input#img-10:checked~.modal-window {
-  background-image: url(../Resources/PortfolioCertifications/FaeqFaisal-YP-careers_in_technology.png);
+  background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-YP-careers_in_technology.png);
 }
 
 /*
