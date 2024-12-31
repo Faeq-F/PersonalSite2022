@@ -19,14 +19,13 @@ aside {
   font-weight: bold;
 }
 
-
 /* scroll content styling */
 
 .content {
   position: relative;
   margin-left: 50vw;
   font-size: 28px;
-  padding: 0em 0.5em;
+  padding: 0em 2.5em;
   margin-top: -50%;
 }
 
@@ -34,14 +33,15 @@ aside {
   display: inline-grid;
   margin: 10px;
   background-color: #ffffff;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
-  -webkit-transition: -webkit-transform .5s, opacity .5s;
-  -moz-transition: -moz-transform .5s, opacity .5s;
-  -o-transition: -o-transform .5s, opacity .5s;
-  transition: transform .5s, opacity .5s;
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  -moz-transition: -moz-transform 0.5s, opacity 0.5s;
+  -o-transition: -o-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
 }
 
 /*
@@ -51,7 +51,6 @@ aside {
   }
 }
 */
-
 
 @media (max-width: 661px) {
   aside {
@@ -125,24 +124,10 @@ aside {
 
 */
 
-
-
-
-
-
-
-
-
-
-
-
 #PortfolioScrollImg {
   width: 3vw;
   margin-top: -1vh;
 }
-
-
-
 
 /* new Grid */
 :root {
@@ -177,7 +162,7 @@ aside {
   grid-auto-flow: dense;
 }
 
-@media(max-width: 661px) {
+@media (max-width: 661px) {
   .grid-container {
     grid-template-rows: repeat(11, 42vw);
   }
@@ -213,60 +198,59 @@ aside {
 */
 
 .grid-item:nth-child(1),
-input#img-0:checked~.modal-window {
+input#img-0:checked ~ .modal-window {
   background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-Microsoft-FoundationalCsharp.png);
 }
 
 .grid-item:nth-child(2),
-input#img-1:checked~.modal-window {
+input#img-1:checked ~ .modal-window {
   background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-Cisco-Work_Experience.png);
 }
 
 .grid-item:nth-child(3),
-input#img-2:checked~.modal-window {
+input#img-2:checked ~ .modal-window {
   background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-mimo-certificates-web_development.png);
   background-position: 55% center;
 }
 
-
 .grid-item:nth-child(4),
-input#img-3:checked~.modal-window {
+input#img-3:checked ~ .modal-window {
   background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-RI-Masterclasses.png);
 }
 
 .grid-item:nth-child(5),
-input#img-4:checked~.modal-window {
+input#img-4:checked ~ .modal-window {
   background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-Siemens-work_experience.png);
 }
 
 .grid-item:nth-child(6),
-input#img-5:checked~.modal-window {
+input#img-5:checked ~ .modal-window {
   background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-YP-science\,_engineering_&_IT_work_experience.png);
 }
 
 .grid-item:nth-child(7),
-input#img-6:checked~.modal-window {
+input#img-6:checked ~ .modal-window {
   background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-mimo-certificates-become_a_hacker.png);
 }
 
 .grid-item:nth-child(8),
-input#img-7:checked~.modal-window {
+input#img-7:checked ~ .modal-window {
   background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-mimo-certificates-make_a_website.png);
   background-position: 85% center;
 }
 
 .grid-item:nth-child(9),
-input#img-8:checked~.modal-window {
+input#img-8:checked ~ .modal-window {
   background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-YP-tech_the_future_work_experience.png);
 }
 
 .grid-item:nth-child(10),
-input#img-9:checked~.modal-window {
+input#img-9:checked ~ .modal-window {
   background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-YP-tech_the_future_insight_evening.png);
 }
 
 .grid-item:nth-child(11),
-input#img-10:checked~.modal-window {
+input#img-10:checked ~ .modal-window {
   background-image: url(/PersonalSite2022/Resources/PortfolioCertifications/FaeqFaisal-YP-careers_in_technology.png);
 }
 
@@ -324,16 +308,6 @@ input#img-20:checked~.modal-window {
 
 */
 
-
-
-
-
-
-
-
-
-
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -342,7 +316,6 @@ input#img-20:checked~.modal-window {
   100% {
     opacity: 1;
   }
-
 }
 
 @keyframes fadeOut {
@@ -353,7 +326,6 @@ input#img-20:checked~.modal-window {
   100% {
     opacity: 0;
   }
-
 }
 
 .fadeIn {
@@ -408,11 +380,9 @@ input.modal-launcher:checked {
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-
 }
 
 #PortfolioGrid {
-
   height: 87%;
   overflow-y: scroll;
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -453,20 +423,12 @@ input.modal-launcher:checked {
   line-height: 0.85em;
   text-align: center;
   transform: rotate(45deg);
-
 }
 
-input.modal-launcher:checked~.modal-window,
-input.modal-launcher:checked~.modal-window+.modal-overlay {
+input.modal-launcher:checked ~ .modal-window,
+input.modal-launcher:checked ~ .modal-window + .modal-overlay {
   display: block;
 }
-
-
-
-
-
-
-
 
 .grid-item label {
   display: block;
@@ -481,7 +443,6 @@ input.modal-launcher:checked~.modal-window+.modal-overlay {
   position: relative;
 }
 
-
 .grid-item label span {
   padding: 2px 8px;
   border-radius: 2px;
@@ -494,15 +455,10 @@ input.modal-launcher:checked~.modal-window+.modal-overlay {
   bottom: 10px;
 }
 
-
 .grid-item label:hover span {
   transition: all 0.35s ease 0s;
   opacity: 1;
 }
-
-
-
-
 
 /*
 
